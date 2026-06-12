@@ -140,7 +140,7 @@ After both deployments:
 - `401 Unauthorized`: log in again; verify `JWT_SECRET`, `REFRESH_TOKEN_SECRET`, issuer, and audience are stable between deploys.
 - `500 JWT_SECRET must be set`: production secrets must be at least 32 characters and not use placeholder values.
 - `HTTP 405 API error` on login: Vercel is handling `POST /api/auth/login` instead of the backend.
-  Confirm `api/[...path].js` is deployed, `vercel.json` excludes `api/` from the SPA rewrite, and
+  Confirm `api/proxy.js` is deployed, `vercel.json` rewrites `/api/(.*)` to `/api/proxy`, and
   `BACKEND_API_BASE_URL=https://<render-service>.onrender.com/api` is set in Vercel.
 - Frontend calls `/api` on Vercel instead of Render: this is OK when the Vercel API proxy is deployed.
   Without the proxy, set `VITE_API_BASE_URL=https://<render-service>.onrender.com/api` and redeploy Vercel.

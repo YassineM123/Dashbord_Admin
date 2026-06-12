@@ -55,6 +55,14 @@ function getRequestBody(req) {
   return JSON.stringify(req.body);
 }
 
+function getProxyPath(req) {
+  const path = req.query?.path;
+  if (Array.isArray(path)) {
+    return path.join('/');
+  }
+  return String(path || '').replace(/^\/+/, '');
+}
+
 export default async function handler(req, res) {
   const apiBase = normalizeApiBase();
   if (!apiBase) {
@@ -66,8 +74,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const path = Array.isArray(req.query.path) ? req.query.path.join('/') : req.query.path || '';
-  const targetUrl = new URL(`${apiBase}/${path}`);
+  const targetUrl = new URL(`${apiBase}/${getProxyPath(req)}`);
 
   for (const [key, value] of Object.entries(req.query || {})) {
     if (key === 'path') {
