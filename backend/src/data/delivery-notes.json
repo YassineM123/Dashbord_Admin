@@ -1,0 +1,80 @@
+[
+  {
+    "id": "dn_10243",
+    "number": "BL-10243",
+    "orderId": "#10243",
+    "deliveryId": "del_10243",
+    "customerName": "Pierre Durand",
+    "status": "Delivered",
+    "createdAt": "2026-03-02T17:00:00Z"
+  },
+  {
+    "id": "dn_wxkvovvp",
+    "number": "BL-2026-0001",
+    "orderId": "#10245",
+    "invoiceId": "inv_pzcrx2mu",
+    "deliveryId": "del_10245",
+    "customer": {
+      "id": "1",
+      "name": "Jean Dupont",
+      "phone": "+216 20 111 111",
+      "email": "jean@example.com",
+      "address": "123 Avenue Habib Bourguiba, Tunis",
+      "city": "Tunis",
+      "country": "Tunisia"
+    },
+    "business": {
+      "name": "Ma Boutique E-commerce",
+      "email": "support@example.com",
+      "phone": "+216 XX XXX XXX",
+      "address": "123 Avenue Habib Bourguiba, Tunis 1000",
+      "taxId": ""
+    },
+    "lines": [
+      {
+        "id": "li_10245_1",
+        "productId": "1",
+        "variantId": "1-space-gray",
+        "name": "MacBook Pro 16",
+        "sku": "MBP-16-SG",
+        "size": "16",
+        "color": "Space Gray",
+        "material": "Aluminium",
+        "quantity": 1
+      }
+    ],
+    "delivery": {
+      "id": "del_10245",
+      "company": "Local Express",
+      "driverName": "Karim Saidi",
+      "driverPhone": "+216 55 111 222",
+      "trackingNumber": "LE10245",
+      "status": "Waiting",
+      "deliveryFee": 10,
+      "address": "123 Avenue Habib Bourguiba, Tunis",
+      "city": "Tunis"
+    },
+    "createdAt": "2026-06-03T15:52:03.186Z",
+    "updatedAt": "2026-06-03T15:52:03.186Z",
+    "customerId": "1",
+    "customerName": "Jean Dupont",
+    "lineItems": [
+      {
+        "id": "li_10245_1",
+        "productId": "1",
+        "variantId": "1-space-gray",
+        "name": "MacBook Pro 16",
+        "sku": "MBP-16-SG",
+        "size": "16",
+        "color": "Space Gray",
+        "material": "Aluminium",
+        "quantity": 1
+      }
+    ],
+    "deliveryCompany": "Local Express",
+    "driverName": "Karim Saidi",
+    "trackingNumber": "LE10245",
+    "deliveryStatus": "Waiting",
+    "status": "Waiting"
+  }
+]

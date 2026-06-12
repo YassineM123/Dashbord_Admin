@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "name": "Jean Dupont",
+    "email": "jean@example.com",
+    "phone": "+216 20 111 111",
+    "address": "123 Avenue Habib Bourguiba",
+    "city": "Tunis",
+    "country": "Tunisia",
+    "status": "active",
+    "tags": ["VIP"],
+    "notes": [
+      {
+        "id": "note_jean_1",
+        "text": "Prefers phone confirmation before delivery.",
+        "createdAt": "2026-03-01T09:00:00.000Z"
+      }
+    ],
+    "reminders": [],
+    "segment": "VIP"
+  },
+  {
+    "id": "2",
+    "name": "Marie Martin",
+    "email": "marie@example.com",
+    "phone": "+216 20 222 222",
+    "address": "Rue de la Republique",
+    "city": "Sousse",
+    "country": "Tunisia",
+    "status": "active",
+    "tags": ["Repeat Buyer"],
+    "notes": [],
+    "reminders": [
+      {
+        "id": "rem_marie_1",
+        "title": "Follow up after delivery",
+        "dueAt": "2026-03-07T09:00:00.000Z",
+        "status": "Open",
+        "createdAt": "2026-03-03T10:00:00.000Z"
+      }
+    ],
+    "segment": "Repeat Buyer"
+  },
+  {
+    "id": "3",
+    "name": "Pierre Durand",
+    "email": "pierre@example.com",
+    "phone": "+216 20 333 333",
+    "address": "Boulevard Tahar Sfar",
+    "city": "Sfax",
+    "country": "Tunisia",
+    "status": "active",
+    "tags": ["VIP", "COD"],
+    "notes": [],
+    "reminders": [],
+    "segment": "VIP"
+  },
+  {
+    "id": "4",
+    "name": "Sophie Bernard",
+    "email": "sophie@example.com",
+    "phone": "+216 20 444 444",
+    "address": "Avenue Habib Thameur",
+    "city": "Nabeul",
+    "country": "Tunisia",
+    "status": "blocked",
+    "tags": ["Inactive"],
+    "notes": [],
+    "reminders": [],
+    "segment": "Inactive"
+  }
+]

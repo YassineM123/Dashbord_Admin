@@ -1,0 +1,72 @@
+[
+  {
+    "id": "n1",
+    "type": "warning",
+    "title": "Stock faible",
+    "message": "3 produits necessitent un reapprovisionnement",
+    "time": "Il y a 5 min",
+    "read": true
+  },
+  {
+    "id": "n2",
+    "type": "info",
+    "title": "Nouvelle commande",
+    "message": "Commande #10245 recue - 156 EUR",
+    "time": "Il y a 15 min",
+    "read": true
+  },
+  {
+    "id": "n3",
+    "type": "success",
+    "title": "Livraison confirmee",
+    "message": "Commande #10240 livree avec succes",
+    "time": "Il y a 1h",
+    "read": true
+  },
+  {
+    "id": "n_mjc1zac2",
+    "type": "warning",
+    "title": "Low stock",
+    "message": "iPhone 15 Pro stock is low (13)",
+    "time": "2026-06-03T15:20:49.799Z",
+    "read": false
+  },
+  {
+    "id": "n_aqu6xxq2",
+    "type": "warning",
+    "title": "Low stock",
+    "message": "AirPods Pro stock is low (5)",
+    "time": "2026-06-03T15:21:50.119Z",
+    "read": false
+  },
+  {
+    "id": "n_92svxr6s",
+    "type": "warning",
+    "title": "Low stock",
+    "message": "mac17 stock is low (5)",
+    "time": "2026-06-03T15:22:01.252Z",
+    "read": false
+  },
+  {
+    "id": "n_k9gjd097",
+    "type": "warning",
+    "title": "Low stock",
+    "message": "AirPods Pro stock is low (4)",
+    "time": "2026-06-03T15:29:27.254Z",
+    "read": false
+  },
+  {
+    "id": "n_x6bwigmd",
+    "type": "success",
+    "title": "Invoice generated",
+    "message": "INV-2026-0001 generated for Jean Dupont.",
+    "priority": "medium",
+    "link": "/admin/invoices?invoice=inv_9y449vb0",
+    "entityType": "invoice",
+    "entityId": "inv_9y449vb0",
+    "dedupeKey": "",
+    "time": "2026-06-12T12:12:51.096Z",
+    "createdAt": "2026-06-12T12:12:51.096Z",
+    "read": false
+  }
+]

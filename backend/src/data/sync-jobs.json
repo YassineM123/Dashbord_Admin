@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sync_b6nr44an",
+    "channelId": "channel_manual",
+    "provider": "manual",
+    "type": "products",
+    "status": "completed",
+    "startedAt": "2026-06-03T15:21:03.463Z",
+    "completedAt": "2026-06-03T15:21:03.463Z",
+    "result": {
+      "imported": 0,
+      "updated": 0,
+      "skipped": 0,
+      "mode": "manual-placeholder"
+    }
+  },
+  {
+    "id": "sync_ije73yjj",
+    "channelId": "channel_manual",
+    "provider": "manual",
+    "type": "products",
+    "status": "completed",
+    "startedAt": "2026-06-03T15:21:04.224Z",
+    "completedAt": "2026-06-03T15:21:04.224Z",
+    "result": {
+      "imported": 0,
+      "updated": 0,
+      "skipped": 0,
+      "mode": "manual-placeholder"
+    }
+  },
+  {
+    "id": "sync_aqn5zfb8",
+    "channelId": "channel_shopify",
+    "provider": "shopify",
+    "type": "products",
+    "status": "completed",
+    "startedAt": "2026-06-03T15:21:07.702Z",
+    "completedAt": "2026-06-03T15:21:07.702Z",
+    "result": {
+      "imported": 0,
+      "updated": 0,
+      "skipped": 0,
+      "mode": "mock-placeholder"
+    }
+  },
+  {
+    "id": "sync_ogk60gir",
+    "channelId": "channel_shopify",
+    "provider": "shopify",
+    "type": "orders",
+    "status": "completed",
+    "startedAt": "2026-06-03T15:21:09.983Z",
+    "completedAt": "2026-06-03T15:21:09.983Z",
+    "result": {
+      "imported": 0,
+      "updated": 0,
+      "skipped": 0,
+      "mode": "mock-placeholder"
+    }
+  }
+]

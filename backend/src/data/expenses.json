@@ -1,0 +1,24 @@
+[
+  {
+    "id": "exp_1",
+    "title": "Local courier payout",
+    "category": "Delivery",
+    "label": "Local courier payout",
+    "amount": 75,
+    "date": "2026-03-03T18:00:00Z",
+    "paymentMethod": "Cash",
+    "note": "Daily delivery cost",
+    "notes": "Daily delivery cost"
+  },
+  {
+    "id": "exp_2",
+    "title": "Meta testing budget",
+    "category": "Marketing",
+    "label": "Meta testing budget",
+    "amount": 250,
+    "date": "2026-03-03T08:00:00Z",
+    "paymentMethod": "Card",
+    "note": "Mock ad spend",
+    "notes": "Mock ad spend"
+  }
+]

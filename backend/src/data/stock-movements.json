@@ -1,0 +1,90 @@
+[
+  {
+    "id": "stk_seed_1",
+    "type": "order_confirmed",
+    "productId": "1",
+    "variantId": "1-space-gray",
+    "quantity": -1,
+    "reason": "Order #10245 confirmed",
+    "orderId": "#10245",
+    "createdAt": "2026-03-03T14:25:00Z",
+    "createdBy": "system"
+  },
+  {
+    "id": "stk_seed_2",
+    "type": "order_confirmed",
+    "productId": "2",
+    "variantId": "2-128-blue",
+    "quantity": -1,
+    "reason": "Order #10243 confirmed",
+    "orderId": "#10243",
+    "createdAt": "2026-03-02T16:45:00Z",
+    "createdBy": "system"
+  },
+  {
+    "id": "stk_0p8qot2e",
+    "type": "added",
+    "productId": "1",
+    "variantId": "1-space-gray",
+    "quantity": 5,
+    "reason": "Quick restock from dashboard",
+    "orderId": "",
+    "createdAt": "2026-06-03T15:20:45.863Z",
+    "createdBy": "u_admin_1"
+  },
+  {
+    "id": "stk_rwg2cbfi",
+    "type": "added",
+    "productId": "2",
+    "variantId": "2-128-blue",
+    "quantity": 5,
+    "reason": "Quick restock from dashboard",
+    "orderId": "",
+    "createdAt": "2026-06-03T15:20:49.790Z",
+    "createdBy": "u_admin_1"
+  },
+  {
+    "id": "stk_9539c3b6",
+    "type": "added",
+    "productId": "3",
+    "variantId": "3-default",
+    "quantity": 5,
+    "reason": "Quick restock from dashboard",
+    "orderId": "",
+    "createdAt": "2026-06-03T15:21:50.111Z",
+    "createdBy": "u_admin_1"
+  },
+  {
+    "id": "stk_cgub62jp",
+    "type": "added",
+    "productId": "prd_e8n9i5hd",
+    "variantId": "prd_e8n9i5hd-default",
+    "quantity": 5,
+    "reason": "Quick restock from dashboard",
+    "orderId": "",
+    "createdAt": "2026-06-03T15:22:01.245Z",
+    "createdBy": "u_admin_1"
+  },
+  {
+    "id": "stk_1cayoqij",
+    "type": "stock_added",
+    "productId": "1",
+    "variantId": "1-space-gray",
+    "quantity": 1,
+    "reason": "Manual stock update",
+    "orderId": "",
+    "createdAt": "2026-06-03T15:30:11.930Z",
+    "createdBy": "u_admin_1"
+  },
+  {
+    "id": "stk_09iklehp",
+    "type": "stock_added",
+    "productId": "3",
+    "variantId": "3-default",
+    "quantity": 23,
+    "reason": "Manual stock update",
+    "orderId": "",
+    "createdAt": "2026-06-03T15:30:21.505Z",
+    "createdBy": "u_admin_1"
+  }
+]

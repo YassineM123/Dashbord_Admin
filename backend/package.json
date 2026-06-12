@@ -1,0 +1,14 @@
+{
+  "name": "admin-dashboard-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.mjs",
+    "start": "node src/server.mjs",
+    "test:social-agent": "node scripts/social-agent-regression.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

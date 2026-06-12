@@ -1,0 +1,669 @@
+[
+  {
+    "id": "aud_b97ejehb",
+    "action": "stock.movement",
+    "entityType": "stock",
+    "entityId": "stk_0p8qot2e",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:20:45.867Z",
+    "details": {
+      "id": "stk_0p8qot2e",
+      "type": "added",
+      "productId": "1",
+      "variantId": "1-space-gray",
+      "quantity": 5,
+      "reason": "Quick restock from dashboard",
+      "orderId": "",
+      "createdAt": "2026-06-03T15:20:45.863Z",
+      "createdBy": "u_admin_1"
+    }
+  },
+  {
+    "id": "aud_9ga5rluq",
+    "action": "stock.movement",
+    "entityType": "stock",
+    "entityId": "stk_rwg2cbfi",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:20:49.794Z",
+    "details": {
+      "id": "stk_rwg2cbfi",
+      "type": "added",
+      "productId": "2",
+      "variantId": "2-128-blue",
+      "quantity": 5,
+      "reason": "Quick restock from dashboard",
+      "orderId": "",
+      "createdAt": "2026-06-03T15:20:49.790Z",
+      "createdBy": "u_admin_1"
+    }
+  },
+  {
+    "id": "aud_09xj3po5",
+    "action": "integrations.sync",
+    "entityType": "sync_job",
+    "entityId": "sync_b6nr44an",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:21:03.473Z",
+    "details": {
+      "id": "sync_b6nr44an",
+      "channelId": "channel_manual",
+      "provider": "manual",
+      "type": "products",
+      "status": "completed",
+      "startedAt": "2026-06-03T15:21:03.463Z",
+      "completedAt": "2026-06-03T15:21:03.463Z",
+      "result": {
+        "imported": 0,
+        "updated": 0,
+        "skipped": 0,
+        "mode": "manual-placeholder"
+      }
+    }
+  },
+  {
+    "id": "aud_utymbyp9",
+    "action": "integrations.sync",
+    "entityType": "sync_job",
+    "entityId": "sync_ije73yjj",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:21:04.233Z",
+    "details": {
+      "id": "sync_ije73yjj",
+      "channelId": "channel_manual",
+      "provider": "manual",
+      "type": "products",
+      "status": "completed",
+      "startedAt": "2026-06-03T15:21:04.224Z",
+      "completedAt": "2026-06-03T15:21:04.224Z",
+      "result": {
+        "imported": 0,
+        "updated": 0,
+        "skipped": 0,
+        "mode": "manual-placeholder"
+      }
+    }
+  },
+  {
+    "id": "aud_qkrhd1t8",
+    "action": "integrations.sync",
+    "entityType": "sync_job",
+    "entityId": "sync_aqn5zfb8",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:21:07.713Z",
+    "details": {
+      "id": "sync_aqn5zfb8",
+      "channelId": "channel_shopify",
+      "provider": "shopify",
+      "type": "products",
+      "status": "completed",
+      "startedAt": "2026-06-03T15:21:07.702Z",
+      "completedAt": "2026-06-03T15:21:07.702Z",
+      "result": {
+        "imported": 0,
+        "updated": 0,
+        "skipped": 0,
+        "mode": "mock-placeholder"
+      }
+    }
+  },
+  {
+    "id": "aud_l12qxyt5",
+    "action": "integrations.sync",
+    "entityType": "sync_job",
+    "entityId": "sync_ogk60gir",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:21:09.993Z",
+    "details": {
+      "id": "sync_ogk60gir",
+      "channelId": "channel_shopify",
+      "provider": "shopify",
+      "type": "orders",
+      "status": "completed",
+      "startedAt": "2026-06-03T15:21:09.983Z",
+      "completedAt": "2026-06-03T15:21:09.983Z",
+      "result": {
+        "imported": 0,
+        "updated": 0,
+        "skipped": 0,
+        "mode": "mock-placeholder"
+      }
+    }
+  },
+  {
+    "id": "aud_hyupggj1",
+    "action": "stock.movement",
+    "entityType": "stock",
+    "entityId": "stk_9539c3b6",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:21:50.115Z",
+    "details": {
+      "id": "stk_9539c3b6",
+      "type": "added",
+      "productId": "3",
+      "variantId": "3-default",
+      "quantity": 5,
+      "reason": "Quick restock from dashboard",
+      "orderId": "",
+      "createdAt": "2026-06-03T15:21:50.111Z",
+      "createdBy": "u_admin_1"
+    }
+  },
+  {
+    "id": "aud_6bnj0f0l",
+    "action": "stock.movement",
+    "entityType": "stock",
+    "entityId": "stk_cgub62jp",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:22:01.249Z",
+    "details": {
+      "id": "stk_cgub62jp",
+      "type": "added",
+      "productId": "prd_e8n9i5hd",
+      "variantId": "prd_e8n9i5hd-default",
+      "quantity": 5,
+      "reason": "Quick restock from dashboard",
+      "orderId": "",
+      "createdAt": "2026-06-03T15:22:01.245Z",
+      "createdBy": "u_admin_1"
+    }
+  },
+  {
+    "id": "aud_rz1ojbpg",
+    "action": "stock.movement",
+    "entityType": "stock",
+    "entityId": "stk_52ibv06u",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:29:27.248Z",
+    "details": {
+      "id": "stk_52ibv06u",
+      "type": "stock_removed",
+      "productId": "3",
+      "variantId": "3-default",
+      "quantity": -1,
+      "reason": "negative stock prevention check",
+      "orderId": "",
+      "createdAt": "2026-06-03T15:29:27.244Z",
+      "createdBy": "u_admin_1"
+    }
+  },
+  {
+    "id": "aud_k5exwpek",
+    "action": "invoices.generate",
+    "entityType": "invoice",
+    "entityId": "inv_d284vcqx",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:29:51.137Z",
+    "details": {
+      "orderId": "#10245"
+    }
+  },
+  {
+    "id": "aud_tvb8zqpo",
+    "action": "invoices.generate",
+    "entityType": "invoice",
+    "entityId": "inv_pzcrx2mu",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:29:55.678Z",
+    "details": {
+      "orderId": "#10245"
+    }
+  },
+  {
+    "id": "aud_e69eeoj5",
+    "action": "stock.movement",
+    "entityType": "stock",
+    "entityId": "stk_1cayoqij",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:30:11.935Z",
+    "details": {
+      "id": "stk_1cayoqij",
+      "type": "stock_added",
+      "productId": "1",
+      "variantId": "1-space-gray",
+      "quantity": 1,
+      "reason": "Manual stock update",
+      "orderId": "",
+      "createdAt": "2026-06-03T15:30:11.930Z",
+      "createdBy": "u_admin_1"
+    }
+  },
+  {
+    "id": "aud_ofed76by",
+    "action": "stock.movement",
+    "entityType": "stock",
+    "entityId": "stk_09iklehp",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:30:21.510Z",
+    "details": {
+      "id": "stk_09iklehp",
+      "type": "stock_added",
+      "productId": "3",
+      "variantId": "3-default",
+      "quantity": 23,
+      "reason": "Manual stock update",
+      "orderId": "",
+      "createdAt": "2026-06-03T15:30:21.505Z",
+      "createdBy": "u_admin_1"
+    }
+  },
+  {
+    "id": "aud_frkvn2rw",
+    "action": "invoices.download_pdf",
+    "entityType": "invoice",
+    "entityId": "inv_pzcrx2mu",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:40:09.648Z",
+    "details": {
+      "number": "INV-00595672"
+    }
+  },
+  {
+    "id": "aud_24bgy22l",
+    "action": "invoices.download_pdf",
+    "entityType": "invoice",
+    "entityId": "inv_pzcrx2mu",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:41:58.482Z",
+    "details": {
+      "number": "INV-00595672"
+    }
+  },
+  {
+    "id": "aud_syhlogip",
+    "action": "delivery_notes.generate",
+    "entityType": "delivery_note",
+    "entityId": "dn_wxkvovvp",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:52:03.192Z",
+    "details": {
+      "orderId": "#10245",
+      "deliveryId": "del_10245",
+      "invoiceId": "inv_pzcrx2mu",
+      "number": "BL-2026-0001"
+    }
+  },
+  {
+    "id": "aud_qdgdyu9q",
+    "action": "delivery_notes.download_pdf",
+    "entityType": "delivery_note",
+    "entityId": "dn_wxkvovvp",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-03T15:52:03.212Z",
+    "details": {
+      "number": "BL-2026-0001"
+    }
+  },
+  {
+    "id": "aud_4cei0dai",
+    "action": "accounting.export_csv",
+    "entityType": "accounting",
+    "entityId": "csv",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T08:31:08.018Z",
+    "details": {
+      "expenses": 2
+    }
+  },
+  {
+    "id": "aud_eadgr9qo",
+    "action": "accounting.export_csv",
+    "entityType": "accounting",
+    "entityId": "csv",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:11:45.151Z",
+    "details": {
+      "expenses": 2
+    }
+  },
+  {
+    "id": "aud_xpj2tmb1",
+    "action": "delivery.create",
+    "entityType": "delivery",
+    "entityId": "del_bhm1e4bt",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:50.867Z",
+    "details": {
+      "trackingNumber": "SMK-1781266370",
+      "status": "Waiting",
+      "company": "Smoke Courier",
+      "address": "Smoke Address",
+      "city": "Tunis",
+      "id": "del_bhm1e4bt",
+      "orderId": "",
+      "customerId": "",
+      "deliveryType": "home delivery",
+      "driverName": "",
+      "driverPhone": "",
+      "deliveryFee": 0,
+      "failedReason": "",
+      "timeline": [],
+      "createdAt": "2026-06-12T12:12:50.860Z",
+      "updatedAt": "2026-06-12T12:12:50.860Z"
+    }
+  },
+  {
+    "id": "aud_rj1g0h2a",
+    "action": "delivery.update",
+    "entityType": "delivery",
+    "entityId": "del_bhm1e4bt",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:50.882Z",
+    "details": {
+      "status": "Assigned"
+    }
+  },
+  {
+    "id": "aud_aqg9y38b",
+    "action": "delivery.delete",
+    "entityType": "delivery",
+    "entityId": "del_bhm1e4bt",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:50.895Z",
+    "details": {
+      "orderId": "",
+      "trackingNumber": "SMK-1781266370"
+    }
+  },
+  {
+    "id": "aud_mvwhl9os",
+    "action": "expenses.create",
+    "entityType": "expense",
+    "entityId": "exp_pnfe8ufj",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:50.909Z",
+    "details": {
+      "amount": 1,
+      "title": "Smoke Test Expense",
+      "category": "QA",
+      "paymentMethod": "Cash",
+      "id": "exp_pnfe8ufj",
+      "date": "2026-06-12T12:12:50.903Z",
+      "label": "Smoke Test Expense",
+      "note": "",
+      "notes": "",
+      "createdAt": "2026-06-12T12:12:50.903Z",
+      "updatedAt": "2026-06-12T12:12:50.903Z"
+    }
+  },
+  {
+    "id": "aud_4090278y",
+    "action": "expenses.update",
+    "entityType": "expense",
+    "entityId": "exp_pnfe8ufj",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:50.922Z",
+    "details": {
+      "amount": 2
+    }
+  },
+  {
+    "id": "aud_m6d80uwr",
+    "action": "expenses.delete",
+    "entityType": "expense",
+    "entityId": "exp_pnfe8ufj",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:50.934Z",
+    "details": {
+      "title": "Smoke Test Expense",
+      "amount": 2
+    }
+  },
+  {
+    "id": "aud_2emngr3c",
+    "action": "marketing.create",
+    "entityType": "marketing_campaign",
+    "entityId": "mkt_n28kt57x",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:50.951Z",
+    "details": {
+      "body": "Smoke body",
+      "name": "Smoke Test Campaign",
+      "subject": "Smoke",
+      "channel": "Email",
+      "segment": "QA",
+      "status": "Draft",
+      "id": "mkt_n28kt57x",
+      "scheduledAt": "",
+      "sentAt": "",
+      "createdAt": "2026-06-12T12:12:50.945Z"
+    }
+  },
+  {
+    "id": "aud_nrx9y867",
+    "action": "marketing.delete",
+    "entityType": "marketing_campaign",
+    "entityId": "mkt_n28kt57x",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:50.965Z",
+    "details": {
+      "name": "Smoke Test Campaign",
+      "status": "Draft"
+    }
+  },
+  {
+    "id": "aud_k4nx91fr",
+    "action": "ads.create",
+    "entityType": "ad_campaign",
+    "entityId": "ad_u9c2ss35",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:50.979Z",
+    "details": {
+      "platform": "Manual",
+      "leads": 0,
+      "revenue": 0,
+      "objective": "QA",
+      "name": "Smoke Test Ad",
+      "orders": 0,
+      "budget": 1,
+      "status": "Draft",
+      "impressions": 0,
+      "clicks": 0,
+      "id": "ad_u9c2ss35",
+      "roas": 0
+    }
+  },
+  {
+    "id": "aud_ujbvtmk6",
+    "action": "ads.delete",
+    "entityType": "ad_campaign",
+    "entityId": "ad_u9c2ss35",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:50.992Z",
+    "details": {
+      "name": "Smoke Test Ad",
+      "platform": "Manual"
+    }
+  },
+  {
+    "id": "aud_o5syuhkf",
+    "action": "integrations.create",
+    "entityType": "sales_channel",
+    "entityId": "chn_c4tjb9rs",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:51.018Z",
+    "details": {
+      "provider": "shopify",
+      "name": "Smoke Test Channel",
+      "status": "disconnected",
+      "enabled": false,
+      "id": "chn_c4tjb9rs",
+      "credentialsMeta": {},
+      "lastSyncAt": "",
+      "productSyncEnabled": true,
+      "orderSyncEnabled": true,
+      "createdAt": "2026-06-12T12:12:51.012Z"
+    }
+  },
+  {
+    "id": "aud_wi0o9qbo",
+    "action": "integrations.delete",
+    "entityType": "sales_channel",
+    "entityId": "chn_c4tjb9rs",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:51.033Z",
+    "details": {
+      "provider": "shopify",
+      "name": "Smoke Test Channel"
+    }
+  },
+  {
+    "id": "aud_1qlvg8t0",
+    "action": "invoices.create_from_order",
+    "entityType": "invoice",
+    "entityId": "inv_9y449vb0",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:51.090Z",
+    "details": {
+      "orderId": "#10245",
+      "number": "INV-2026-0001"
+    }
+  },
+  {
+    "id": "aud_uslnx7p9",
+    "action": "invoices.download_pdf",
+    "entityType": "invoice",
+    "entityId": "inv_9y449vb0",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:51.105Z",
+    "details": {
+      "number": "INV-2026-0001"
+    }
+  },
+  {
+    "id": "aud_z6f046gu",
+    "action": "invoices.delete",
+    "entityType": "invoice",
+    "entityId": "inv_9y449vb0",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:51.118Z",
+    "details": {
+      "number": "INV-2026-0001",
+      "orderId": "#10245",
+      "total": 2509
+    }
+  },
+  {
+    "id": "aud_t10nx3ho",
+    "action": "delivery_notes.generate",
+    "entityType": "delivery_note",
+    "entityId": "dn_uo7dfyqz",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:51.135Z",
+    "details": {
+      "orderId": "#10245",
+      "deliveryId": "del_10245",
+      "invoiceId": "inv_pzcrx2mu",
+      "number": "BL-2026-0002"
+    }
+  },
+  {
+    "id": "aud_koin6skh",
+    "action": "delivery_notes.download_pdf",
+    "entityType": "delivery_note",
+    "entityId": "dn_uo7dfyqz",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:51.143Z",
+    "details": {
+      "number": "BL-2026-0002"
+    }
+  },
+  {
+    "id": "aud_fmdhh7vv",
+    "action": "delivery_notes.update",
+    "entityType": "delivery_note",
+    "entityId": "dn_uo7dfyqz",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:51.157Z",
+    "details": {
+      "status": "Assigned"
+    }
+  },
+  {
+    "id": "aud_7blq9u29",
+    "action": "delivery_notes.delete",
+    "entityType": "delivery_note",
+    "entityId": "dn_uo7dfyqz",
+    "userId": "u_admin_1",
+    "userEmail": "admin@client.com",
+    "userRole": "Executive",
+    "timestamp": "2026-06-12T12:12:51.171Z",
+    "details": {
+      "number": "BL-2026-0002",
+      "orderId": "#10245"
+    }
+  }
+]

@@ -1,0 +1,133 @@
+[
+  {
+    "id": "c1",
+    "channel": "whatsapp",
+    "contact": "Ahmed Ben Ali",
+    "avatar": "👤",
+    "unread": 0,
+    "lastMessage": "feddes",
+    "timestamp": "16:30",
+    "messages": [
+      {
+        "id": "m1",
+        "sender": "contact",
+        "text": "Bonjour, je voudrais commander votre produit",
+        "timestamp": "10:25"
+      },
+      {
+        "id": "m2",
+        "sender": "user",
+        "text": "Bonjour, bien sur. De quel produit s'agit-il ?",
+        "timestamp": "10:26",
+        "status": "read"
+      },
+      {
+        "id": "m3",
+        "sender": "contact",
+        "text": "Le MacBook Pro 16 pouces",
+        "timestamp": "10:27"
+      },
+      {
+        "id": "msg_tqj1u31z",
+        "sender": "user",
+        "text": "(amical, francais) Bonjour Ahmed Ben Ali, merci pour votre message: \"Le MacBook Pro 16 pouces\". Nous sommes disponibles pour vous aider et finaliser votre commande.",
+        "timestamp": "01:41",
+        "status": "sent"
+      },
+      {
+        "id": "msg_zv2ubycd",
+        "sender": "user",
+        "text": "Bonjour Ahmed, pour finaliser votre commande de MacBook Pro 16 pouces, il nous manque votre numéro de téléphone et votre adresse de livraison. Pourriez-vous nous les fournir s'il vous plaît ?",
+        "timestamp": "19:37",
+        "status": "sent"
+      },
+      {
+        "id": "msg_ivgupqgq",
+        "sender": "user",
+        "text": "Pour finaliser votre demande, envoyez seulement: telephone, adresse / ville.",
+        "timestamp": "19:38",
+        "status": "sent"
+      },
+      {
+        "id": "msg_0ppyw7gh",
+        "sender": "user",
+        "text": "مرحباً! هل يمكنك توضيح ما إذا كنت تستفسر عن المعلومات المطلوبة لإنهاء طلبك؟",
+        "timestamp": "19:38",
+        "status": "sent"
+      },
+      {
+        "id": "msg_aoq2jk22",
+        "sender": "user",
+        "text": "feddes",
+        "timestamp": "16:30",
+        "status": "sent"
+      }
+    ],
+    "status": "open",
+    "lastAiMeta": null
+  },
+  {
+    "id": "c2",
+    "channel": "facebook",
+    "contact": "Sara Mansouri",
+    "avatar": "👩",
+    "unread": 0,
+    "lastMessage": "Je peux vous aider pour le prix, la disponibilite, la livraison ou la commande. Vous voulez quoi exactement ?",
+    "timestamp": "16:31",
+    "messages": [
+      {
+        "id": "m21",
+        "sender": "contact",
+        "text": "Bonjour, avez-vous des promotions ?",
+        "timestamp": "09:10"
+      },
+      {
+        "id": "m22",
+        "sender": "user",
+        "text": "Oui, nous avons une offre cette semaine.",
+        "timestamp": "09:15",
+        "status": "read"
+      },
+      {
+        "id": "msg_g0jjv8ti",
+        "sender": "user",
+        "text": "Je peux vous aider pour le prix, la disponibilite, la livraison ou la commande. Vous voulez quoi exactement ?",
+        "timestamp": "16:31",
+        "status": "sent"
+      }
+    ],
+    "status": "open",
+    "lastAiMeta": null
+  },
+  {
+    "id": "c3",
+    "channel": "instagram",
+    "contact": "Mehdi Trabelsi",
+    "avatar": "👨",
+    "unread": 0,
+    "lastMessage": "(professionnel, arabe) Bonjour Mehdi Trabelsi, Créer un brouillon de commande.",
+    "timestamp": "18:23",
+    "messages": [
+      {
+        "id": "m31",
+        "sender": "contact",
+        "text": "Quel est le prix ?",
+        "timestamp": "Hier"
+      },
+      {
+        "id": "msg_db3e5egr",
+        "sender": "user",
+        "text": "(professionnel, arabe) Bonjour Ahmed Ben Ali, merci pour votre message: \"(amical, francais) Bonjour Ahmed Ben Ali, merci pour votre message: \"Le MacBook Pro 16 pouces\". Nous sommes disponibles pour vous aider et finaliser votre commande.\". Nous sommes disponibles pour vous aider et finaliser votre commande.",
+        "timestamp": "14:17",
+        "status": "sent"
+      },
+      {
+        "id": "msg_3h3pfeoy",
+        "sender": "user",
+        "text": "(professionnel, arabe) Bonjour Mehdi Trabelsi, Créer un brouillon de commande.",
+        "timestamp": "18:23",
+        "status": "sent"
+      }
+    ]
+  }
+]

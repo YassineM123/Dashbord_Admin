@@ -1,0 +1,18 @@
+[
+  {
+    "id": "tpl_1",
+    "name": "Abandoned cart reminder",
+    "channel": "Email",
+    "subject": "Your cart is still waiting",
+    "body": "Complete your order today and get fast delivery.",
+    "placeholder": true
+  },
+  {
+    "id": "tpl_2",
+    "name": "VIP offer",
+    "channel": "Email",
+    "subject": "A private offer for you",
+    "body": "Thank you for being one of our best customers.",
+    "placeholder": false
+  }
+]

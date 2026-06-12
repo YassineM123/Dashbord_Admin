@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ad_1",
+    "name": "Meta Prospecting - Electronics",
+    "platform": "Meta",
+    "objective": "Sales",
+    "status": "Active",
+    "budget": 500,
+    "impressions": 42000,
+    "clicks": 1260,
+    "leads": 84,
+    "orders": 18,
+    "revenue": 3240,
+    "roas": 6.48
+  },
+  {
+    "id": "ad_2",
+    "name": "Google Search - iPhone",
+    "platform": "Google",
+    "objective": "Conversions",
+    "status": "Paused",
+    "budget": 350,
+    "impressions": 18000,
+    "clicks": 760,
+    "leads": 41,
+    "orders": 7,
+    "revenue": 1480,
+    "roas": 4.23
+  }
+]

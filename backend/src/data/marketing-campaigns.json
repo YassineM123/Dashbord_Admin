@@ -1,0 +1,26 @@
+[
+  {
+    "id": "mkt_1",
+    "name": "VIP March Newsletter",
+    "channel": "Email",
+    "segment": "VIP",
+    "subject": "Early access for our best customers",
+    "body": "A focused offer for VIP customers with fast delivery.",
+    "status": "Draft",
+    "scheduledAt": "",
+    "sentAt": "",
+    "createdAt": "2026-03-03T08:00:00Z"
+  },
+  {
+    "id": "mkt_2",
+    "name": "COD SMS Reminder",
+    "channel": "SMS",
+    "segment": "Cash on Delivery",
+    "subject": "",
+    "body": "Your order can be confirmed today. Reply YES to continue.",
+    "status": "Scheduled",
+    "scheduledAt": "2026-03-06T09:00:00Z",
+    "sentAt": "",
+    "createdAt": "2026-03-03T09:00:00Z"
+  }
+]

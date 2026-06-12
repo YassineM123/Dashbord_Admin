@@ -1,0 +1,152 @@
+[
+  {
+    "id": "1",
+    "name": "MacBook Pro 16",
+    "sku": "MBP-16",
+    "price": 2499,
+    "costPrice": 1760,
+    "stock": 51,
+    "views": 1234,
+    "status": "available",
+    "category": "Electronique",
+    "active": true,
+    "updated": "2026-03-02",
+    "image": "box",
+    "variants": [
+      {
+        "id": "1-space-gray",
+        "size": "16",
+        "color": "Space Gray",
+        "material": "Aluminium",
+        "sku": "MBP-16-SG",
+        "stock": 31,
+        "reserved": 0,
+        "lowStockThreshold": 5
+      },
+      {
+        "id": "1-silver",
+        "size": "16",
+        "color": "Silver",
+        "material": "Aluminium",
+        "sku": "MBP-16-SV",
+        "stock": 20,
+        "reserved": 0,
+        "lowStockThreshold": 5
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "iPhone 15 Pro",
+    "sku": "IPH-15-PRO",
+    "price": 1199,
+    "costPrice": 820,
+    "stock": 13,
+    "views": 2341,
+    "status": "available",
+    "category": "Electronique",
+    "active": true,
+    "updated": "2026-03-01",
+    "image": "phone",
+    "variants": [
+      {
+        "id": "2-128-blue",
+        "size": "128GB",
+        "color": "Blue",
+        "material": "Titanium",
+        "sku": "IPH-15-PRO-128-BL",
+        "stock": 13,
+        "reserved": 0,
+        "lowStockThreshold": 10
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "AirPods Pro",
+    "sku": "AIR-PRO",
+    "price": 249,
+    "costPrice": 135,
+    "stock": 27,
+    "views": 890,
+    "status": "available",
+    "category": "Electronique",
+    "active": true,
+    "updated": "2026-02-28",
+    "image": "audio",
+    "variants": [
+      {
+        "id": "3-default",
+        "size": "Default",
+        "color": "White",
+        "material": "Plastic",
+        "sku": "AIR-PRO-WH",
+        "stock": 27,
+        "reserved": 0,
+        "lowStockThreshold": 5
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "T-shirt Premium",
+    "sku": "TS-PREM",
+    "price": 45,
+    "costPrice": 18,
+    "stock": 120,
+    "views": 678,
+    "status": "available",
+    "category": "Mode",
+    "active": true,
+    "updated": "2026-03-03",
+    "image": "shirt",
+    "variants": [
+      {
+        "id": "5-m-black",
+        "size": "M",
+        "color": "Black",
+        "material": "Cotton",
+        "sku": "TS-PREM-M-BLK",
+        "stock": 60,
+        "reserved": 0,
+        "lowStockThreshold": 15
+      },
+      {
+        "id": "5-l-white",
+        "size": "L",
+        "color": "White",
+        "material": "Cotton",
+        "sku": "TS-PREM-L-WHT",
+        "stock": 60,
+        "reserved": 0,
+        "lowStockThreshold": 15
+      }
+    ]
+  },
+  {
+    "id": "prd_e8n9i5hd",
+    "name": "mac17",
+    "sku": "MAC17",
+    "category": "Electronique",
+    "image": "box",
+    "price": 52,
+    "costPrice": 31,
+    "stock": 5,
+    "status": "low_stock",
+    "views": 0,
+    "active": true,
+    "updated": "2026-04-05",
+    "variants": [
+      {
+        "id": "prd_e8n9i5hd-default",
+        "size": "Default",
+        "color": "Default",
+        "material": "Standard",
+        "sku": "MAC17-DEFAULT",
+        "stock": 5,
+        "reserved": 0,
+        "lowStockThreshold": 5
+      }
+    ]
+  }
+]

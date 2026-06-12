@@ -1,0 +1,59 @@
+[
+  {
+    "id": "channel_manual",
+    "provider": "manual",
+    "name": "Manual Sales",
+    "enabled": true,
+    "status": "connected",
+    "credentialsMeta": {},
+    "lastSyncAt": "2026-06-03T15:21:04.224Z",
+    "productSyncEnabled": true,
+    "orderSyncEnabled": true,
+    "createdAt": "2026-03-01T00:00:00Z"
+  },
+  {
+    "id": "channel_shopify",
+    "provider": "shopify",
+    "name": "Shopify Store",
+    "enabled": false,
+    "status": "disconnected",
+    "credentialsMeta": {
+      "shopDomain": "",
+      "hasAccessToken": false
+    },
+    "lastSyncAt": "2026-06-03T15:21:09.983Z",
+    "productSyncEnabled": true,
+    "orderSyncEnabled": true,
+    "createdAt": "2026-03-01T00:00:00Z"
+  },
+  {
+    "id": "channel_woocommerce",
+    "provider": "woocommerce",
+    "name": "WooCommerce Store",
+    "enabled": false,
+    "status": "disconnected",
+    "credentialsMeta": {
+      "siteUrl": "",
+      "hasConsumerKey": false
+    },
+    "lastSyncAt": "",
+    "productSyncEnabled": true,
+    "orderSyncEnabled": true,
+    "createdAt": "2026-03-01T00:00:00Z"
+  },
+  {
+    "id": "channel_prestashop",
+    "provider": "prestashop",
+    "name": "PrestaShop Store",
+    "enabled": false,
+    "status": "disconnected",
+    "credentialsMeta": {
+      "siteUrl": "",
+      "hasApiKey": false
+    },
+    "lastSyncAt": "",
+    "productSyncEnabled": true,
+    "orderSyncEnabled": true,
+    "createdAt": "2026-03-01T00:00:00Z"
+  }
+]

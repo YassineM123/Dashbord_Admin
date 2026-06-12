@@ -1,0 +1,79 @@
+[
+  {
+    "id": "inv_10243",
+    "number": "INV-10243",
+    "orderId": "#10243",
+    "customerId": "3",
+    "customerName": "Pierre Durand",
+    "status": "Issued",
+    "subtotal": 1199,
+    "deliveryFee": 12,
+    "total": 1211,
+    "costTotal": 820,
+    "grossMargin": 379,
+    "paymentStatus": "Cash on Delivery",
+    "createdAt": "2026-03-02T17:00:00Z"
+  },
+  {
+    "id": "inv_d284vcqx",
+    "number": "INV-00591128",
+    "orderId": "#10245",
+    "customerId": "1",
+    "customerName": "Jean Dupont",
+    "lineItems": [
+      {
+        "id": "li_10245_1",
+        "productId": "1",
+        "variantId": "1-space-gray",
+        "name": "MacBook Pro 16",
+        "sku": "MBP-16-SG",
+        "size": "16",
+        "color": "Space Gray",
+        "material": "Aluminium",
+        "quantity": 1,
+        "unitPrice": 2499,
+        "costPrice": 1760,
+        "total": 2499
+      }
+    ],
+    "subtotal": 2499,
+    "deliveryFee": 10,
+    "total": 2509,
+    "costTotal": 1760,
+    "grossMargin": 739,
+    "paymentStatus": "Paid",
+    "status": "Issued",
+    "createdAt": "2026-06-03T15:29:51.129Z"
+  },
+  {
+    "id": "inv_pzcrx2mu",
+    "number": "INV-00595672",
+    "orderId": "#10245",
+    "customerId": "1",
+    "customerName": "Jean Dupont",
+    "lineItems": [
+      {
+        "id": "li_10245_1",
+        "productId": "1",
+        "variantId": "1-space-gray",
+        "name": "MacBook Pro 16",
+        "sku": "MBP-16-SG",
+        "size": "16",
+        "color": "Space Gray",
+        "material": "Aluminium",
+        "quantity": 1,
+        "unitPrice": 2499,
+        "costPrice": 1760,
+        "total": 2499
+      }
+    ],
+    "subtotal": 2499,
+    "deliveryFee": 10,
+    "total": 2509,
+    "costTotal": 1760,
+    "grossMargin": 739,
+    "paymentStatus": "Paid",
+    "status": "Issued",
+    "createdAt": "2026-06-03T15:29:55.672Z"
+  }
+]

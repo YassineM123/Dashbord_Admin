@@ -1,0 +1,59 @@
+{
+  "store": {
+    "name": "Ma Boutique E-commerce",
+    "supportEmail": "support@example.com",
+    "supportPhone": "+216 XX XXX XXX",
+    "address": "123 Avenue Habib Bourguiba, Tunis 1000"
+  },
+  "payments": {
+    "cardEnabled": true,
+    "codEnabled": true,
+    "bankTransferEnabled": false,
+    "currency": "TND"
+  },
+  "notifications": {
+    "newOrders": true,
+    "lowStock": true,
+    "campaignReports": true,
+    "executiveSummaryEnabled": true,
+    "executiveSummaryFrequency": "weekly"
+  },
+  "security": {
+    "sessionDuration": "24h"
+  },
+  "integrations": {
+    "ga4": {
+      "connected": false,
+      "measurementId": "",
+      "placeholder": true
+    }
+  },
+  "agents": {
+    "autoReplyEnabled": true,
+    "tone": "professionnel",
+    "language": "ar"
+  },
+  "agentRules": [
+    {
+      "id": "r1",
+      "contains": "prix",
+      "action": "Envoyer catalogue des prix",
+      "active": true,
+      "triggers": 12
+    },
+    {
+      "id": "r2",
+      "contains": "livraison",
+      "action": "Envoyer informations de livraison",
+      "active": true,
+      "triggers": 8
+    },
+    {
+      "id": "rule_rpfvplvj",
+      "contains": "commande",
+      "action": "Créer un brouillon de commande",
+      "active": true,
+      "triggers": 0
+    }
+  ]
+}

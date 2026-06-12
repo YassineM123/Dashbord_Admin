@@ -1,0 +1,9 @@
+[
+  {
+    "id": "u_admin_1",
+    "email": "admin@client.com",
+    "name": "Admin Client",
+    "role": "Executive",
+    "passwordHash": "scrypt:f6e99cf89a925df67a26c7d626cbb6d3e25a164b8dc1bec3234abde415f988bd2f6cb93187be244c019022b1215b87749eaa5a70176a19f58434fe3f5a429fc0"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "AI-001",
+    "source": "WhatsApp",
+    "customer": "Ahmed Ben Ali",
+    "customerEmail": "ahmed@example.tn",
+    "customerPhone": "+216 98 123 456",
+    "customerAddress": "Avenue Habib Bourguiba, Tunis",
+    "product": "MacBook Pro 16\"",
+    "productDescription": "MacBook Pro 16 pouces, M3 Pro, 18 Go RAM, 512 Go SSD",
+    "status": "annule",
+    "amount": 2499,
+    "date": "2026-03-24T10:30:00Z",
+    "confidence": 85
+  },
+  {
+    "id": "AI-002",
+    "source": "Facebook",
+    "customer": "Sara Mansouri",
+    "customerEmail": "sara.m@example.tn",
+    "customerPhone": "+216 22 456 789",
+    "customerAddress": "Rue de la Republique, Sousse",
+    "product": "iPhone 15 Pro",
+    "productDescription": "iPhone 15 Pro, 256 Go, Titane naturel",
+    "status": "confirme",
+    "amount": 1299,
+    "date": "2026-03-24T09:15:00Z",
+    "confidence": 92
+  },
+  {
+    "id": "AI-003",
+    "source": "Instagram",
+    "customer": "Mehdi Trabelsi",
+    "customerPhone": "+216 55 789 012",
+    "customerAddress": "Boulevard Tahar Sfar, Sfax",
+    "product": "AirPods Pro",
+    "productDescription": "AirPods Pro (2eme generation) avec etui de charge MagSafe",
+    "status": "brouillon",
+    "amount": 249,
+    "date": "2026-03-23T16:45:00Z",
+    "confidence": 78
+  },
+  {
+    "id": "AI-004",
+    "source": "WhatsApp",
+    "customer": "Leila Hamdi",
+    "customerEmail": "leila.h@example.tn",
+    "customerPhone": "+216 29 345 678",
+    "customerAddress": "Avenue de la Corniche, Bizerte",
+    "product": "iPad Air",
+    "productDescription": "iPad Air 11 pouces, Wi-Fi, 256 Go",
+    "status": "confirme",
+    "amount": 649,
+    "date": "2026-03-23T14:20:00Z",
+    "confidence": 88
+  },
+  {
+    "id": "AI-005",
+    "source": "Facebook",
+    "customer": "Karim Gharbi",
+    "customerPhone": "+216 93 567 890",
+    "product": "Apple Watch",
+    "status": "annule",
+    "amount": 0,
+    "date": "2026-03-23T11:10:00Z",
+    "confidence": 62
+  }
+]

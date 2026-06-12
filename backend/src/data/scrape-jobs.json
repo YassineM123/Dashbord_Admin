@@ -1,0 +1,24 @@
+[
+  {
+    "id": "job_8e0ob6s6",
+    "status": "completed",
+    "query": "",
+    "category": "Decoration",
+    "city": "Tunis",
+    "limit": 50,
+    "startedAt": "2026-04-05T18:26:29.402Z",
+    "completedAt": "2026-04-05T18:26:31.140Z",
+    "createdCount": 10
+  },
+  {
+    "id": "job_d7nvbkmh",
+    "status": "completed",
+    "query": "",
+    "category": "Decoration",
+    "city": "Nabeul",
+    "limit": 50,
+    "startedAt": "2026-04-05T23:49:57.707Z",
+    "completedAt": "2026-04-05T23:49:59.435Z",
+    "createdCount": 10
+  }
+]

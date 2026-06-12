@@ -1,0 +1,201 @@
+Design new automation pages for an existing admin dashboard web app (e-commerce SaaS). The routes are under /admin/*. The design must strictly reuse a shared layout system:
+
+* Left sidebar (collapsible, icons + labels)
+* Topbar (search, date filters, role switcher, notifications, dark mode, profile)
+* Main content with modular cards, tables, drawers, and modals
+
+Style:
+Premium, modern, enterprise SaaS (similar to Stripe / Linear / Notion)
+High clarity, minimal noise, excellent spacing (8pt system), accessible contrast
+Clean typography (Inter-like)
+Provide both light and dark mode
+
+Language:
+All UI labels must be in French
+
+---
+
+ADD NEW SECTION IN SIDEBAR:
+"Automations"
+With sub-pages:
+
+* Leads
+* Agents
+* Commandes AI
+* Copilot Avancé
+
+---
+
+PAGE 1: /admin/leads (Lead Generation)
+
+Goal:
+Scrape and manage leads from sources like maps
+
+UI Structure:
+
+* Header:
+  Title: "Génération de leads"
+  CTA button: "Lancer scraping"
+
+* Filters bar:
+  Search input: "Rechercher (ex: décoration Tunis)"
+  Location dropdown
+  Status filter chips: Nouveau / Contacté / Converti
+
+* Table:
+  Columns:
+  Nom | Catégorie | Téléphone | Ville | Source | Statut | Actions
+
+* Bulk actions bar (appears on selection):
+  "Ajouter au CRM" / "Marquer comme contacté"
+
+* Right drawer (lead details):
+  Contact info
+  Notes
+  Button: "Envoyer message"
+
+States:
+
+* Loading skeleton
+* Empty state with CTA "Lancer un scraping"
+* Error state with retry
+
+---
+
+PAGE 2: /admin/agents/social (AI Social Agent)
+
+Goal:
+Automate replies to messages
+
+UI Structure:
+
+* 3-column layout:
+
+LEFT PANEL (Channels):
+
+* Facebook
+* Instagram
+* WhatsApp
+  Active selection highlight
+
+CENTER PANEL (Inbox):
+
+* Conversation list
+* Message bubbles
+* Input area
+* AI suggestion box
+  Buttons:
+  "Envoyer"
+  "Modifier"
+
+RIGHT PANEL (AI Settings):
+
+* Tone selector (segmented):
+  Professionnel / Amical / Commercial
+* Language selector
+* Toggle:
+  "Réponse automatique activée"
+* Rules builder:
+  If message contains → action
+
+States:
+
+* Live typing indicator
+* AI loading animation
+* Error retry
+
+---
+
+PAGE 3: /admin/commandes-ai (Auto Orders)
+
+Goal:
+Convert conversations into orders
+
+UI Structure:
+
+* KPI strip:
+  Commandes AI générées
+  Taux de conversion
+  Revenus AI
+
+* Table:
+  Source | Client | Produit détecté | Statut | Total | Date
+
+* Status badges:
+  Brouillon / Confirmé / Annulé
+
+* Right drawer:
+  Order details
+  Editable fields:
+  produit, adresse, téléphone
+  Buttons:
+  "Confirmer commande"
+  "Envoyer facture"
+
+* Highlight tag:
+  "Généré par IA"
+
+---
+
+PAGE 4: /admin/copilot-avance (AI Copilot Advanced)
+
+Goal:
+Professional assistant for operations and finance
+
+UI Structure:
+
+* Top input panel:
+  Role selector
+  Date range
+  Text question field
+  Toggle:
+  "Afficher prompt système"
+
+* Output layout (modular cards):
+
+1. "Analyse principale"
+2. "Insights clés"
+3. "Anomalies détectées"
+4. "Actions prioritaires"
+   (with CTA buttons linking to other pages)
+5. "Vérification factures & devis"
+6. "Faits vs hypothèses" (2-column table)
+7. "Métadonnées d’exécution"
+
+* Collapsible sections
+* Copyable text blocks
+
+States:
+
+* Loading animation (AI thinking)
+* Empty state (no data)
+* Error state
+
+---
+
+GLOBAL COMPONENTS TO USE:
+
+* KPI cards
+* Tables with sticky header + bulk actions
+* Drawers for details
+* Modals for confirmations
+* Status badges (color coded)
+* Chips, toggles, segmented controls
+* Tooltips
+
+---
+
+RESPONSIVE:
+
+* Mobile: sidebar collapses
+* Tables become cards
+* Drawers become bottom sheets
+
+---
+
+IMPORTANT:
+
+* Maintain strict consistency with existing AdminLayout
+* Reuse spacing, typography, colors, and interaction patterns
+* Ensure all components are reusable
+* Include both light and dark mode variants
