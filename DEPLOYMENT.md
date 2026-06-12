@@ -31,9 +31,12 @@ Set these in Vercel Project Settings -> Environment Variables:
 
 ```bash
 VITE_API_BASE_URL=https://admin-dashboard-backend.onrender.com/api
+BACKEND_API_BASE_URL=https://admin-dashboard-backend.onrender.com/api
 ```
 
-Replace the hostname with the real Render backend URL after the backend is created.
+Replace the hostname with the real Render backend URL after the backend is created. `VITE_API_BASE_URL`
+is used by the browser build. `BACKEND_API_BASE_URL` is used by the Vercel `/api/*` proxy, so API
+calls still work when the frontend uses same-origin `/api` routes.
 
 ### Backend: Render
 
@@ -91,7 +94,8 @@ Expected response:
 4. Output directory: `dist`.
 5. Install command: `npm ci`.
 6. Set `VITE_API_BASE_URL` to the Render backend API URL ending in `/api`.
-7. Deploy.
+7. Set `BACKEND_API_BASE_URL` to the same Render backend API URL ending in `/api`.
+8. Deploy.
 
 ## Deployment Commands
 
@@ -135,7 +139,11 @@ After both deployments:
 - `CORS` error in browser: add the exact Vercel origin to `CORS_ORIGINS` and redeploy Render. Include custom domains separately.
 - `401 Unauthorized`: log in again; verify `JWT_SECRET`, `REFRESH_TOKEN_SECRET`, issuer, and audience are stable between deploys.
 - `500 JWT_SECRET must be set`: production secrets must be at least 32 characters and not use placeholder values.
-- Frontend calls `/api` on Vercel instead of Render: set `VITE_API_BASE_URL=https://<render-service>.onrender.com/api` and redeploy Vercel.
+- `HTTP 405 API error` on login: Vercel is handling `POST /api/auth/login` instead of the backend.
+  Confirm `api/[...path].js` is deployed, `vercel.json` excludes `api/` from the SPA rewrite, and
+  `BACKEND_API_BASE_URL=https://<render-service>.onrender.com/api` is set in Vercel.
+- Frontend calls `/api` on Vercel instead of Render: this is OK when the Vercel API proxy is deployed.
+  Without the proxy, set `VITE_API_BASE_URL=https://<render-service>.onrender.com/api` and redeploy Vercel.
 - Data disappears after Render redeploy: confirm the Render disk is attached and `DATA_DIR=/var/data`.
 - Supabase data is not changing: expected until the backend repositories are migrated from JSON files to Supabase/PostgreSQL.
 - Render build fails in `backend`: confirm `backend/package-lock.json` is committed and Render uses root directory `backend`.
