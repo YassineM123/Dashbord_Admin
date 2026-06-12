@@ -8,6 +8,9 @@
     "dev": "concurrently -k -n frontend,backend -c green,blue \"npm run dev:frontend\" \"npm run dev:backend\"",
     "dev:frontend": "vite",
     "dev:backend": "node backend/src/server.mjs",
+    "prestart": "node backend/scripts/validate-production-env.mjs",
+    "start": "node backend/src/server.mjs",
+    "prestart:backend": "node backend/scripts/validate-production-env.mjs",
     "start:backend": "node backend/src/server.mjs",
     "smoke:api": "powershell -ExecutionPolicy Bypass -File scripts/smoke-api.ps1"
   },

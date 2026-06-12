@@ -67,7 +67,16 @@ OPENAI_MODEL=gpt-4.1-mini
 
 Keep `SUPABASE_SERVICE_ROLE_KEY`, JWT secrets, refresh secrets, and salts server-only. Never add them to Vercel frontend variables.
 
+`JWT_SECRET`, `REFRESH_TOKEN_SECRET`, and `PASSWORD_SALT` must each be unique random values with at
+least 32 characters. In PowerShell, you can generate safe values locally:
+
+```powershell
+node -e "console.log(require('node:crypto').randomBytes(48).toString('hex'))"
+```
+
 ## Deploy Backend on Render
+
+Recommended: create the backend from the `render.yaml` Blueprint.
 
 1. Push this project to GitHub.
 2. In Render, create a new Blueprint and select this repository.
@@ -85,6 +94,16 @@ Expected response:
 ```json
 {"data":{"ok":true,"service":"admin-dashboard-backend"}}
 ```
+
+If you created the Render service manually instead of using the Blueprint, use these settings:
+
+```text
+Build command: npm ci && npm run build
+Start command: npm start
+Root directory: leave empty / repository root
+```
+
+Do not use `npm run dev:backend` as the production start command.
 
 ## Deploy Frontend on Vercel
 
@@ -138,7 +157,8 @@ After both deployments:
 
 - `CORS` error in browser: add the exact Vercel origin to `CORS_ORIGINS` and redeploy Render. Include custom domains separately.
 - `401 Unauthorized`: log in again; verify `JWT_SECRET`, `REFRESH_TOKEN_SECRET`, issuer, and audience are stable between deploys.
-- `500 JWT_SECRET must be set`: production secrets must be at least 32 characters and not use placeholder values.
+- `JWT_SECRET must be set` or `Production backend environment is incomplete`: set `JWT_SECRET`,
+  `REFRESH_TOKEN_SECRET`, and `PASSWORD_SALT` in Render to unique 32+ character secrets, then redeploy.
 - `HTTP 405 API error` on login: Vercel is handling `POST /api/auth/login` instead of the backend.
   Confirm `api/proxy.js` is deployed, `vercel.json` rewrites `/api/(.*)` to `/api/proxy`, and
   `BACKEND_API_BASE_URL=https://<render-service>.onrender.com/api` is set in Vercel.

@@ -1,4 +1,4 @@
-const DEFAULT_TIMEOUT_MS = 30000;
+const DEFAULT_TIMEOUT_MS = 8000;
 
 function trimTrailingSlash(value) {
   return String(value || '').replace(/\/+$/, '');
