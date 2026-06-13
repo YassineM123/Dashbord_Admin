@@ -95,12 +95,14 @@ Expected response:
 {"data":{"ok":true,"service":"admin-dashboard-backend"}}
 ```
 
-If you created the Render service manually instead of using the Blueprint, use these settings:
+If you created the Render service manually instead of using the Blueprint, `render.yaml` will not
+create the generated secrets for you. Add every backend environment variable listed above in the
+Render dashboard first, then use these settings:
 
 ```text
-Build command: npm ci && npm run build
+Root directory: backend
+Build command: npm ci
 Start command: npm start
-Root directory: leave empty / repository root
 ```
 
 Do not use `npm run dev:backend` as the production start command.
