@@ -43,6 +43,8 @@ const PUBLIC_API_ROUTES = new Set([
   'POST /api/auth/refresh',
 ]);
 
+const RENDER_RUNTIME_DATA_DIR = '/opt/render/project/src/backend/runtime-data';
+
 function toQueryObject(searchParams) {
   const out = {};
   for (const [key, value] of searchParams.entries()) {
@@ -96,11 +98,33 @@ async function seedDataDirIfNeeded(sourceDir, targetDir) {
   );
 }
 
+async function resolveDataDir(seedDataDir, preferredDataDir) {
+  try {
+    await seedDataDirIfNeeded(seedDataDir, preferredDataDir);
+    return preferredDataDir;
+  } catch (error) {
+    const isLegacyRenderDataDir =
+      preferredDataDir === '/var/data' && error?.message?.includes('/var/data');
+    if (!isLegacyRenderDataDir) {
+      throw error;
+    }
+
+    console.warn(
+      [
+        'DATA_DIR=/var/data is not writable in this Render service.',
+        `Falling back to ${RENDER_RUNTIME_DATA_DIR}.`,
+        'For persistent production data, mount the Render disk at the fallback path and update DATA_DIR to match.',
+      ].join(' ')
+    );
+    await seedDataDirIfNeeded(seedDataDir, RENDER_RUNTIME_DATA_DIR);
+    return RENDER_RUNTIME_DATA_DIR;
+  }
+}
+
 export async function createApp(env) {
   const currentDir = dirname(fileURLToPath(import.meta.url));
   const seedDataDir = join(currentDir, 'data');
-  const dataDir = env.dataDir || seedDataDir;
-  await seedDataDirIfNeeded(seedDataDir, dataDir);
+  const dataDir = await resolveDataDir(seedDataDir, env.dataDir || seedDataDir);
   const store = new JsonStore(dataDir);
 
   const usersRepo = createUsersRepository(store, env);
