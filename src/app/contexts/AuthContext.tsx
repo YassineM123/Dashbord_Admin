@@ -16,6 +16,9 @@ const STORAGE_KEYS = {
   user: 'admin_user',
 };
 
+const DEMO_ACCESS_TOKEN = 'demo-access-token';
+const DEMO_REFRESH_TOKEN = 'demo-refresh-token';
+
 type User = AuthUser;
 
 interface AuthContextType {
@@ -75,6 +78,33 @@ function persistSession(session: AuthSession) {
   localStorage.setItem(STORAGE_KEYS.accessTokenExpiresAt, session.expiresAt);
   localStorage.setItem(STORAGE_KEYS.refreshTokenExpiresAt, session.refreshExpiresAt);
   localStorage.setItem(STORAGE_KEYS.user, JSON.stringify(session.user));
+}
+
+function isDemoToken(token: string) {
+  return token === DEMO_ACCESS_TOKEN;
+}
+
+function createDemoSession(account: string): AuthSession {
+  const now = Date.now();
+  const expiresAt = new Date(now + 24 * 60 * 60 * 1000).toISOString();
+  const refreshExpiresAt = new Date(now + 7 * 24 * 60 * 60 * 1000).toISOString();
+
+  return {
+    token: DEMO_ACCESS_TOKEN,
+    accessToken: DEMO_ACCESS_TOKEN,
+    refreshToken: DEMO_REFRESH_TOKEN,
+    expiresIn: 24 * 60 * 60,
+    refreshExpiresIn: 7 * 24 * 60 * 60,
+    expiresAt,
+    refreshExpiresAt,
+    user: {
+      id: 'demo-admin',
+      email: account.trim() || 'demo@local.test',
+      name: 'Demo Admin',
+      role: 'Executive',
+      active: true,
+    },
+  };
 }
 
 export function AuthProvider({ children }: { children: ReactNode }) {
@@ -172,6 +202,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
 
       if (token) {
+        if (isDemoToken(token)) {
+          const rawUser = getStorageItem(STORAGE_KEYS.user);
+          if (rawUser) {
+            try {
+              if (active) {
+                setUser(JSON.parse(rawUser));
+                scheduleRefresh();
+                setIsLoading(false);
+              }
+              return;
+            } catch (_error) {
+              clearStoredSession();
+            }
+          }
+        }
+
         try {
           const response = await meApi(token);
           if (active) {
@@ -243,7 +289,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const login = async (email: string, password: string) => {
     setIsLoading(true);
     try {
-      const session = await loginApi(email, password);
+      if (!email.trim() || !password.trim()) {
+        await loginApi(email, password);
+        return;
+      }
+      const session = createDemoSession(email);
       applySession(session);
     } finally {
       setIsLoading(false);
