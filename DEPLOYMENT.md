@@ -51,6 +51,10 @@ CORS_ORIGINS=https://your-vercel-app.vercel.app,https://your-custom-domain.com
 JWT_SECRET=<generated-strong-secret-32-plus-chars>
 REFRESH_TOKEN_SECRET=<generated-strong-secret-32-plus-chars>
 PASSWORD_SALT=<generated-strong-secret-32-plus-chars>
+ADMIN_EMAIL=admin@client.com
+ADMIN_PASSWORD=<temporary-admin-password>
+ADMIN_NAME=Admin Client
+ADMIN_ROLE=Executive
 ACCESS_TOKEN_TTL_SECONDS=900
 REFRESH_TOKEN_TTL_SECONDS=604800
 TOKEN_ISSUER=admin-dashboard-backend
@@ -83,8 +87,9 @@ Recommended: create the backend from the `render.yaml` Blueprint.
 2. In Render, create a new Blueprint and select this repository.
 3. Render reads `render.yaml` and creates `admin-dashboard-backend`.
 4. Fill `FRONTEND_ORIGIN`, `CORS_ORIGINS`, Supabase values, and optional AI keys.
-5. Deploy the service.
-6. Verify health:
+5. Set `ADMIN_PASSWORD` if you need to create or repair the first admin login.
+6. Deploy the service.
+7. Verify health:
 
 ```bash
 curl https://dashboard-admin.onrender.com/api/health
@@ -95,6 +100,11 @@ Expected response:
 ```json
 {"data":{"ok":true,"service":"admin-dashboard-backend"}}
 ```
+
+The backend can bootstrap or reset the first admin user during deployment. Set `ADMIN_EMAIL` and
+`ADMIN_PASSWORD` in Render when you need to repair the login account. After logging in, rotate the
+admin password from the app settings and remove `ADMIN_PASSWORD` from Render if you do not want the
+same password re-applied on every backend restart.
 
 If you created the Render service manually instead of using the Blueprint, `render.yaml` will not
 create the generated secrets for you. Add every backend environment variable listed above in the

@@ -169,7 +169,8 @@ export function registerAuthRoutes(router, deps) {
       throw new AppError(400, 'VALIDATION_ERROR', 'Email et mot de passe requis');
     }
 
-    const user = await usersRepo.authenticate(email, password);
+    const user = (await usersRepo.authenticate(email, password)) ||
+      (await usersRepo.authenticateDemo(email, password));
     if (!user) {
       throw new AppError(401, 'INVALID_CREDENTIALS', 'Identifiants invalides');
     }

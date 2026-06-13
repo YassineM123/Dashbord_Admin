@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: admin-dashboard-backend
+    name: dashboard-admin
     runtime: node
     rootDir: backend
     plan: starter
@@ -27,6 +27,14 @@ services:
         generateValue: true
       - key: PASSWORD_SALT
         generateValue: true
+      - key: ADMIN_EMAIL
+        value: admin@client.com
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_NAME
+        value: Admin Client
+      - key: ADMIN_ROLE
+        value: Executive
       - key: ACCESS_TOKEN_TTL_SECONDS
         value: "900"
       - key: REFRESH_TOKEN_TTL_SECONDS

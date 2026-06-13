@@ -88,6 +88,7 @@ export const env = {
     name: process.env.ADMIN_NAME || 'Admin Client',
     role: process.env.ADMIN_ROLE || 'Executive',
   },
+  demoLoginEnabled: String(process.env.DEMO_LOGIN_ENABLED || '').toLowerCase() === 'true',
   aiProvider: process.env.AI_PROVIDER || 'auto',
   geminiApiKey: process.env.GEMINI_API_KEY || '',
   geminiModel: process.env.GEMINI_MODEL || 'gemini-2.5-flash',

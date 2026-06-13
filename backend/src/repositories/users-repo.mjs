@@ -107,6 +107,27 @@ export function createUsersRepository(store, env) {
     return sanitize(user);
   }
 
+  async function authenticateDemo(account, password) {
+    if (!env.demoLoginEnabled || !String(account || '').trim() || !String(password || '').trim()) {
+      return null;
+    }
+
+    await ensureHashes();
+    const users = await store.read('users', []);
+    const admin =
+      users.find((entry) => entry.active !== false && normalizeRole(entry.role) === 'Executive') ||
+      users.find((entry) => entry.active !== false);
+
+    if (!admin) {
+      return null;
+    }
+
+    return sanitize({
+      ...admin,
+      name: admin.name || 'Demo Admin',
+    });
+  }
+
   async function getById(id) {
     await ensureHashes();
     const users = await store.read('users', []);
@@ -204,6 +225,7 @@ export function createUsersRepository(store, env) {
 
   return {
     authenticate,
+    authenticateDemo,
     getById,
     create,
     update,
