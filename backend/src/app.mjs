@@ -69,7 +69,20 @@ async function seedDataDirIfNeeded(sourceDir, targetDir) {
     return;
   }
 
-  await mkdir(targetDir, { recursive: true });
+  try {
+    await mkdir(targetDir, { recursive: true });
+  } catch (error) {
+    if (error?.code === 'EACCES') {
+      throw new Error(
+        [
+          `DATA_DIR is not writable: ${targetDir}.`,
+          'On Render, attach a persistent disk at this path or set DATA_DIR to a writable app directory such as /opt/render/project/src/backend/runtime-data.',
+        ].join(' ')
+      );
+    }
+    throw error;
+  }
+
   const entries = await readdir(sourceDir, { withFileTypes: true });
   await Promise.all(
     entries
