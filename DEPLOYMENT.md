@@ -30,12 +30,13 @@ The backend currently uses JSON repositories. `DATABASE_URL` and Supabase variab
 Set these in Vercel Project Settings -> Environment Variables:
 
 ```bash
-VITE_API_BASE_URL=https://admin-dashboard-backend.onrender.com/api
-BACKEND_API_BASE_URL=https://admin-dashboard-backend.onrender.com/api
+VITE_API_BASE_URL=/api
+BACKEND_API_BASE_URL=https://dashboard-admin.onrender.com/api
+BACKEND_API_TIMEOUT_MS=25000
 ```
 
-Replace the hostname with the real Render backend URL after the backend is created. `VITE_API_BASE_URL`
-is used by the browser build. `BACKEND_API_BASE_URL` is used by the Vercel `/api/*` proxy, so API
+Keep `VITE_API_BASE_URL=/api` for Vercel browser builds. `BACKEND_API_BASE_URL` is used by the
+Vercel `/api/*` proxy and should point to the Render backend API URL ending in `/api`, so API
 calls still work when the frontend uses same-origin `/api` routes.
 
 ### Backend: Render
@@ -44,7 +45,7 @@ Set these in Render service environment variables:
 
 ```bash
 NODE_ENV=production
-DATA_DIR=/var/data
+DATA_DIR=/opt/render/project/src/backend/runtime-data
 FRONTEND_ORIGIN=https://your-vercel-app.vercel.app
 CORS_ORIGINS=https://your-vercel-app.vercel.app,https://your-custom-domain.com
 JWT_SECRET=<generated-strong-secret-32-plus-chars>
@@ -86,7 +87,7 @@ Recommended: create the backend from the `render.yaml` Blueprint.
 6. Verify health:
 
 ```bash
-curl https://admin-dashboard-backend.onrender.com/api/health
+curl https://dashboard-admin.onrender.com/api/health
 ```
 
 Expected response:
@@ -114,9 +115,10 @@ Do not use `npm run dev:backend` as the production start command.
 3. Build command: `npm run build`.
 4. Output directory: `dist`.
 5. Install command: `npm ci`.
-6. Set `VITE_API_BASE_URL` to the Render backend API URL ending in `/api`.
-7. Set `BACKEND_API_BASE_URL` to the same Render backend API URL ending in `/api`.
-8. Deploy.
+6. Set `VITE_API_BASE_URL=/api`.
+7. Set `BACKEND_API_BASE_URL=https://dashboard-admin.onrender.com/api`.
+8. Set `BACKEND_API_TIMEOUT_MS=25000`.
+9. Deploy.
 
 ## Deployment Commands
 
@@ -164,9 +166,18 @@ After both deployments:
 - `HTTP 405 API error` on login: Vercel is handling `POST /api/auth/login` instead of the backend.
   Confirm `api/proxy.js` is deployed, `vercel.json` rewrites `/api/(.*)` to `/api/proxy`, and
   `BACKEND_API_BASE_URL=https://<render-service>.onrender.com/api` is set in Vercel.
+- `BACKEND_API_INVALID_UPSTREAM`: the configured Render URL is serving a frontend HTML page instead
+  of JSON API responses. Confirm the Render service at `BACKEND_API_BASE_URL` is the Node backend,
+  and that `GET /api/health` returns JSON with `data.ok=true`.
+- `EACCES: permission denied, mkdir '/var/data'`: the Render service has `DATA_DIR=/var/data`
+  but no writable disk mounted there. Set `DATA_DIR=/opt/render/project/src/backend/runtime-data`
+  and attach the Render disk at the same mount path, or recreate the service from the updated
+  Blueprint. New backend builds also fall back to this runtime path so the service can boot while
+  the Render dashboard setting is corrected.
 - Frontend calls `/api` on Vercel instead of Render: this is OK when the Vercel API proxy is deployed.
   Without the proxy, set `VITE_API_BASE_URL=https://<render-service>.onrender.com/api` and redeploy Vercel.
-- Data disappears after Render redeploy: confirm the Render disk is attached and `DATA_DIR=/var/data`.
+- Data disappears after Render redeploy: confirm the Render disk is attached and `DATA_DIR` matches
+  the disk mount path: `/opt/render/project/src/backend/runtime-data`.
 - Supabase data is not changing: expected until the backend repositories are migrated from JSON files to Supabase/PostgreSQL.
 - Render build fails in `backend`: confirm `backend/package-lock.json` is committed and Render uses root directory `backend`.
 

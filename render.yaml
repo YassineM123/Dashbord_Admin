@@ -10,13 +10,13 @@ services:
     autoDeploy: true
     disk:
       name: admin-dashboard-data
-      mountPath: /var/data
+      mountPath: /opt/render/project/src/backend/runtime-data
       sizeGB: 1
     envVars:
       - key: NODE_ENV
         value: production
       - key: DATA_DIR
-        value: /var/data
+        value: /opt/render/project/src/backend/runtime-data
       - key: FRONTEND_ORIGIN
         sync: false
       - key: CORS_ORIGINS
