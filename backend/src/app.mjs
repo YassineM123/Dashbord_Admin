@@ -129,6 +129,7 @@ export async function createApp(env) {
 
   const usersRepo = createUsersRepository(store, env);
   await usersRepo.ensureHashes();
+  await usersRepo.ensureBootstrapAdmin();
 
   const deps = {
     env,

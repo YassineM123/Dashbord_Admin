@@ -82,6 +82,12 @@ export const env = {
     'PASSWORD_SALT',
     process.env.PASSWORD_SALT || 'admin-dashboard-salt'
   ),
+  bootstrapAdmin: {
+    email: process.env.ADMIN_EMAIL || '',
+    password: process.env.ADMIN_PASSWORD || '',
+    name: process.env.ADMIN_NAME || 'Admin Client',
+    role: process.env.ADMIN_ROLE || 'Executive',
+  },
   aiProvider: process.env.AI_PROVIDER || 'auto',
   geminiApiKey: process.env.GEMINI_API_KEY || '',
   geminiModel: process.env.GEMINI_MODEL || 'gemini-2.5-flash',

@@ -48,6 +48,49 @@ export function createUsersRepository(store, env) {
     }
   }
 
+  async function ensureBootstrapAdmin() {
+    const bootstrap = env.bootstrapAdmin || {};
+    const email = String(bootstrap.email || '').trim().toLowerCase();
+    const password = String(bootstrap.password || '');
+    if (!email || !password) {
+      return null;
+    }
+
+    const role = assertRole(bootstrap.role || 'Executive') || 'Executive';
+    const users = await store.read('users', []);
+    const index = users.findIndex((entry) => String(entry.email || '').toLowerCase() === email);
+    const existing = index >= 0 ? users[index] : null;
+    const passwordHash = hashPassword(password, env.passwordSalt);
+    const name = String(bootstrap.name || existing?.name || 'Admin Client');
+
+    if (existing) {
+      const next = {
+        ...existing,
+        email,
+        name,
+        role,
+        active: true,
+        passwordHash,
+      };
+      delete next.password;
+      users[index] = next;
+      await store.write('users', users);
+      return sanitize(next);
+    }
+
+    const user = {
+      id: 'u_admin_1',
+      email,
+      name,
+      role,
+      active: true,
+      passwordHash,
+    };
+    users.push(user);
+    await store.write('users', users);
+    return sanitize(user);
+  }
+
   async function authenticate(email, password) {
     await ensureHashes();
     const users = await store.read('users', []);
@@ -168,5 +211,6 @@ export function createUsersRepository(store, env) {
     listAdminUsers,
     existsByEmail,
     ensureHashes,
+    ensureBootstrapAdmin,
   };
 }
