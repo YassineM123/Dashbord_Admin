@@ -1,45 +1,41 @@
-# Admin Dashboard
+# Dashbord Admin
 
-Full-stack admin dashboard with a Vite frontend and a Node.js backend API.
+A comprehensive admin dashboard built with TypeScript featuring a modern, intuitive UI for managing and monitoring data with real-time updates.
 
-## Requirements
+## Features
 
-- Node.js 18 or newer
-- npm
+- 📊 Modern Dashboard Interface
+- 🎨 Clean and Responsive Design
+- ⚡ Built with TypeScript
+- 🔄 Real-time Data Updates
+- 📱 Mobile-Friendly Layout
 
-## Quick start
+## Live Demo
+
+[View Live Dashboard](https://dashbord-admin-black.vercel.app)
+
+## Tech Stack
+
+- **Frontend:** TypeScript, React
+- **Deployment:** Vercel
+- **Styling:** Modern CSS/Tailwind
+
+## Getting Started
 
 ```bash
+# Clone the repository
+git clone https://github.com/YassineM123/Dashbord_Admin.git
+
+# Navigate to project
+cd Dashbord_Admin
+
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
 ```
 
-`npm run dev` starts both services:
+## License
 
-- Frontend: `http://localhost:5173`
-- Backend API: `http://localhost:4000`
-
-## Run services separately
-
-Frontend only:
-
-```bash
-npm run dev:frontend
-```
-
-Backend only:
-
-```bash
-npm run dev:backend
-```
-
-## Build frontend
-
-```bash
-npm run build
-```
-
-## Documentation
-
-- Backend setup and API routes: `backend/README.md`
-- Project guidelines: `guidelines/Guidelines.md`
+MIT License - feel free to use this project for your own purposes.
